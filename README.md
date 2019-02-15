@@ -8,7 +8,7 @@ If you're looking for the GUI version, click this link: **[MobilePayAlerts (With
 
 ----
 
-**Should already be preinstalled:** sys, os, subprocess, logging, configparser, webbrowser, json
+**Should already be preinstalled:** sys, os, subprocess, logging, webbrowser, json
 
 **Requirements:**  
 - Python 3.6+
