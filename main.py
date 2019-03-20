@@ -1,7 +1,7 @@
 from os import system
 import json
 import PySimpleGUIQt as sg
-import configurator, authentication, alerts #, window
+import configurator, authentication, alerts, qr #, window
 
 log = configurator.LOG.get()
 cfg = configurator.CFG().load("settings.json")
@@ -25,6 +25,8 @@ class GUI():
 
 			"_BTN_RESET_": Main.resetConfig,
 			"_BTN_SETUP_": Main.setup,
+
+			"_BTN_GENQR_": qr.generate,
 		}
 
 		tab_1 = sg.Tab("Generelt", 
@@ -61,8 +63,6 @@ class GUI():
 
 			'''if event in self.event_combiner:
 				self.event_combiner[event](values)'''
-
-			#sg.FindElement('_OUTPUT_')
 
 			print(event, values)
 

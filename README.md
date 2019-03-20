@@ -17,6 +17,7 @@ If you're looking for the GUI version, click this link: **[MobilePayAlerts (With
 - Requests
 - Asyncio
 - Psutil
+- qrcode
 
 `pip install PyQt5 requests asyncio psutil websockets==6.0.0`
 

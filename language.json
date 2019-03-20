@@ -66,6 +66,12 @@
 			"tt":"Start opsætning for at modtage nye tokens til Streamlabs og Pushbullet"
 		},
 
+		"btn_generate":{
+			"text":"Generer en QR kode",
+			"key":"_BTN_GENQR_",
+			"tt":"Generer en QR kode"
+		},
+
 		"pop_setup":{"text":"Tryk OK for at starte førstegangs opsætning"}
 	},
 
@@ -134,6 +140,12 @@
 			"text":"Setup",
 			"key":"_BTN_SETUP_",
 			"tt":"Start setup to get new access token for Streamlabs and Pushbullet"
+		},
+
+		"btn_generate":{
+			"text":"Generate QR code",
+			"key":"_BTN_GENQR_",
+			"tt":"Generate a QR code"
 		},
 
 		"pop_setup":{"text":"Press OK to start first-time setup"}
