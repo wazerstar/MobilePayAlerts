@@ -7,6 +7,9 @@ class CFG():
 		if not isfile("settings.json"):
 			self.reset("settings.json")
 
+		if not isfile("language.json"):
+			self.reset("language.json")
+
 	def save(self, cfg_file, settings):
 		settings = json.dumps(settings, indent=4)
 
@@ -16,26 +19,35 @@ class CFG():
 		f.close()
 
 	def load(self, cfg_file):
+		log.info(f"Loading {cfg_file}")
+
 		with open(cfg_file) as f:
 			settings = json.load(f)
 
 		return settings
 
 	def reset(self, cfg_file):
-		self.save(cfg_file, self.default())
+		self.save(cfg_file, self.default(cfg_file))
 
-	def default(self):
-		settings = {
-			"default_msg"	:"",
-			"default_name"	:"Anon",
+	def default(self, cfg_file):
+		if cfg_file == "settings.json":
+			settings = {
+				"language": "danish",
 
-			"pb_token"		:"",
-			"sl_token"		:"",
+				"default_msg"	:"",
+				"default_name"	:"Anon",
 
-			"redirect_uri"		:"http://localhost:1337",
-			"redirect_uri_short":"localhost",
-			"port"				:1337
-		}
+				"pb_token"		:"",
+				"sl_token"		:"",
+
+				"redirect_uri"		:"http://localhost:1337",
+				"redirect_uri_short":"localhost",
+				"port"				:1337
+			}
+
+		else:
+			log.debug("Unknown file")
+			settings = {}
 
 		return settings
 
