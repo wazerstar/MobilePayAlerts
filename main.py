@@ -39,9 +39,13 @@ class GUI():
 					[[sg.Text(text["label_settings"]["text"], font=("def", "def", "bold"))],
 					 [sg.Text(text["label_name"]["text"], size=(11, 0.6)), sg.InputText(default_text=cfg["default_name"], key=text["input_name"]["key"], do_not_clear=True, tooltip=text["input_name"]["tt"])],
 					 [sg.Text(text["label_msg"]["text"],  size=(11, 0.6)), sg.InputText(default_text=cfg["default_msg"],  key=text["input_msg"]["key"],  do_not_clear=True, tooltip=text["input_msg"]["tt"])],
-					 [sg.Text(text["label_lang"]["text"], size=(11, 0.6)), sg.InputCombo(text["languages"], key=text["combobox"]["key"])],
+					 [sg.Text(text["label_lang"]["text"], size=(11, 0.6)), sg.InputCombo(text["languages"], key=text["combobox"]["key"], default_value=cfg["Language"].capitalize())],
 					 [sg.Button(text["btn_save"]["text"], key=text["btn_save"]["key"], tooltip=text["btn_save"]["tt"])],
 							 
+					 [sg.HorizontalSeparator()],
+
+					 [sg.Button(text["btn_generate"]["text"], key=text["btn_generate"]["key"], tooltip=text["btn_generate"]["tt"])],
+
 					 [sg.HorizontalSeparator()],
 							
 					 [sg.Text(text["label_other_settings"]["text"], font=("def", "def", "bold"))],
@@ -53,7 +57,6 @@ class GUI():
 	def main(self):
 		window = sg.Window(self.WINDOW_TITLE).Layout(self.layout)
 
-		#window.FindElement('_COMBO_LANG_').Update(set_to_index=text["languages"].index(cfg["language"].capitalize()))
 		print(window)
 
 		while True:
