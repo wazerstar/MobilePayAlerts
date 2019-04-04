@@ -2,9 +2,10 @@ MobilePayAlerts (Core Edition / Console Edition)
 
 ----
 
-This branch contains the core of MobilePayAlerts without GUI.
+This branch contains the development version of MobilePayAlerts with GUI.
 
-If you're looking for the GUI version, click this link: **[MobilePayAlerts (With GUI)](https://github.com/BenTearzz/MobilePayAlerts/tree/master)**
+If you're looking for the master version, click this link: **[MobilePayAlerts (With GUI)](https://github.com/BenTearzz/MobilePayAlerts/tree/master)**  
+If you're looking for the core version, click this link: **[MobilePayAlerts (With GUI)](https://github.com/BenTearzz/MobilePayAlerts-Core)**
 
 ----
 
