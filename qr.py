@@ -3,7 +3,7 @@ import qrcode
 
 def generate():
 	layout = [
-			 [sg.Text("Betalinger lavet med MobilePay box bliver ikke vist på stream!", font=("def", "def", "bold"), text_color="red")],
+			 [sg.Text("Betalinger lavet med MobilePay box, bliver ikke vist på stream!", font=("def", "def", "bold"), text_color="red")],
 			 [sg.Text("Det er foreslået at du genererer QR koden,")],
 			 [sg.Text("ved at bruge dit boxID fra MobilePay appen.\n")],
 			 [sg.Text("Dette gør at dit telefonnummer ikke er bliver vist til alle")],

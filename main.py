@@ -75,15 +75,15 @@ class GUI():
 				alerts.Alerts.testAlert
 				window.FindElement("_BTN_TEST_").Update(visible=True)
 
+			elif event == "_BTN_SAVE_":
+				self.save(values)
+
 			elif event in self.event_combiner:
 				self.event_combiner[event]()
 
 			print(event, values)
 
 		window.Close()
-
-	def setup(self):
-		sg.PopupOK("Opsætning", "Opsætning er krævet")
 
 	def save(self, values):
 		cfg["language"] 	= values["_COMBO_LANG_"]
@@ -97,7 +97,7 @@ class Main():
 		log.info("\n")
 
 		if cfg["pb_token"] == "" or cfg["sl_token"] == "":
-			gui.setup()
+			sg.PopupOK("Opsætning", "Opsætning er krævet")
 
 			self.setup()
 		else:
